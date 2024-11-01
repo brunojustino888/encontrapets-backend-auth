@@ -1,5 +1,7 @@
 package br.com.encontrapets.model;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,4 +27,17 @@ public class Usuario {
 
     @Column(name = "ID_PERFIL")
     private Integer idPerfil;
+
+    @Column(name = "DATA_CADASTRO")
+    private Date dataCadastro;
+
+    @Column(name = "USER_CADASTRO")
+    private String userCadastro;
+
+    @Column(name = "DATA_ATUALIZACAO", nullable = false)
+    private Date dataAtualizacao;
+
+    @Column(name = "USER_ATUALIZACAO", nullable = false)
+    private String userAtualizacao;
+
 }
