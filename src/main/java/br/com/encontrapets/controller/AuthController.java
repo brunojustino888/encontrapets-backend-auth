@@ -23,7 +23,7 @@ public class AuthController {
     
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequestDto loginDto) {
-        boolean authenticated = usuarioService.autenticarUsuario(loginDto.getLogin(), loginDto.getSenha());
+        boolean authenticated = this.usuarioService.autenticarUsuario(loginDto.getLogin(), loginDto.getSenha());
 
         if (authenticated) {
             String token = jwtUtil.generateToken(loginDto.getLogin());
